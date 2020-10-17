@@ -30,18 +30,27 @@
 
 ## ❔ Sobre o projeto
 
-Uma plataforma para facilitar o encontro de orfanatos por pessoas que querem visita-los.
+O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
 
-O projeto está em desenvolvimento na [Next Level Week 3](https://nextlevelweek.com/episodios/omnistack/1/edicao/3)
-
+O projeto foi desenvolvido durante a Next Level Week 3 💜🚀
 
 ## 📸 Screenshots
-
+<img alt="Happy" src="./.github/happy.png">
 ## 🛠 Techs
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- [Node.js](https://nodejs.org/en/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## ⚙ Instalação e Start
+## 🔖 Layout
 
+Nos links abaixo você encontra o layout do projeto web e também do mobile. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
+
+- [Layout Web](https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web)
+- [Layout Mobile](https://www.figma.com/file/X27FfVxAgy9f5IFa7ONlph/Happy-Mobile)
 
 ## 🤝 Contribuições
 
