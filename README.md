@@ -36,7 +36,8 @@ O projeto foi desenvolvido durante a Next Level Week 3 💜🚀
 
 ## 📸 Screenshots
 <img alt="Happy" src="./.github/happy.png">
-## 🛠 Techs
+
+## 🚀 Techs 🛠
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/)
