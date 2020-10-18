@@ -1,23 +1,33 @@
-import React, { FormEvent, useState, ChangeEvent } from "react";
+import React, { FormEvent, useState, ChangeEvent, useEffect } from "react";
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
-
 import { FiPlus } from "react-icons/fi";
-
 import '../styles/pages/create-orphanage.css';
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
-
+import InputMask from 'react-input-mask';
 
 export default function OrphanagesMap() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    setIsDarkMode(localStorage.getItem('darkMode') === 'true');
+  }, [])
+
+  function handleDarkModeButton() {
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('darkMode', String(!isDarkMode));
+  }
+
   const history = useHistory();
 
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 })
 
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
@@ -57,6 +67,7 @@ export default function OrphanagesMap() {
 
     data.append('name', name);
     data.append('about', about);
+    data.append('whatsapp', whatsapp);
     data.append('latitude', String(latitude));
     data.append('longitude', String(longitude));
     data.append('instructions', instructions);
@@ -76,14 +87,14 @@ export default function OrphanagesMap() {
 
   return (
     <div id="page-create-orphanage">
-      <Sidebar />
+      <Sidebar isDarkMode={isDarkMode} handleDarkModeButton={handleDarkModeButton} />
       <main>
         <form onSubmit={handleSubmit} className="create-orphanage-form">
           <fieldset>
             <legend>Dados</legend>
 
             <Map
-              center={[-27.2092052, -49.6401092]}
+              center={[-10.9472468, -37.0730823]}
               style={{ width: '100%', height: 280 }}
               zoom={15}
               onclick={handleMapClick}
@@ -112,6 +123,12 @@ export default function OrphanagesMap() {
                 onChange={
                   event => setName(event.target.value)}
               />
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="whatsapp">Whatsapp</label>
+              <InputMask mask="(99)99999-9999" value={whatsapp} onChange={event => setWhatsapp(event.target.value)}>
+              </InputMask>
             </div>
 
             <div className="input-block">

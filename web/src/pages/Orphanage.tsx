@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import { useParams } from 'react-router-dom';
 
@@ -9,13 +9,12 @@ import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
 import api from "../services/api";
 
-
-
 interface Orphanage {
   latitude: number;
   longitude: number;
   name: string;
   about: string;
+  whatsapp: string;
   instructions: string;
   opening_hours: string;
   open_on_weekends: string;
@@ -30,9 +29,13 @@ interface OrphanageParams {
 }
 
 export default function Orphanage() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+
 
   useEffect(() => {
     api.get(`orphanages/${params.id}`).then(response => {
@@ -40,13 +43,27 @@ export default function Orphanage() {
     });
   }, [params.id]);
 
+  useEffect(() => {
+    api.get(`orphanages/${params.id}`).then(response => {
+      setOrphanage(response.data);
+    });
+    setIsDarkMode(localStorage.getItem('darkMode') === 'true');
+  }, [params.id]);
+
+  function handleDarkModeButton() {
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('darkMode', String(!isDarkMode));
+  }
+
   if (!orphanage) {
     return <p>Carregando...</p>;
   }
 
+  const substituindo = orphanage?.whatsapp.replace(/\D/g, '')
+
   return (
-    <div id="page-orphanage">
-      <Sidebar />
+    <div id="page-orphanage" >
+      <Sidebar isDarkMode={isDarkMode} handleDarkModeButton={handleDarkModeButton} />
 
       <main>
         <div className="orphanage-details">
@@ -121,10 +138,14 @@ export default function Orphanage() {
                 )}
             </div>
 
-            {/* <button type="button" className="contact-button">
+            <button onClick={(e) => {
+              e.preventDefault();
+              window.location.href = `https://api.whatsapp.com/send?phone=55${substituindo}`;
+            }}
+              className="contact-button" >
               <FaWhatsapp size={20} color="#FFF" />
               Entrar em contato
-            </button> */}
+            </button>
           </div>
         </div>
       </main>

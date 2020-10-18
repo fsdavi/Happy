@@ -18,6 +18,13 @@ interface Orphanage {
 }
 
 function OrphanagesMap() {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+        setIsDarkMode(localStorage.getItem('darkMode') === 'true');
+        console.log(localStorage.getItem('token'));
+    }, [isDarkMode])
+
     const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
 
     useEffect(() => {
@@ -27,7 +34,7 @@ function OrphanagesMap() {
     }, []);
 
     return (
-        <div id="page-map">
+        <div id="page-map" className={isDarkMode ? 'dark' : ''}>
             <aside>
                 <header>
                     <img src={mapMarkerImg} alt="Happy" />

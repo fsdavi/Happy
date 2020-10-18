@@ -16,6 +16,10 @@
     justify-content: space-between;
 }
 
+#page-map.dark aside{
+    background: linear-gradient(315deg, #000000 0%, #130F40 74%);
+}
+
 #page-map aside h2 {
     font-size: 40px;
     font-weight: 800;
