@@ -34,7 +34,6 @@ function Landing() {
                 <div className="location">
                     <strong>Aracaju</strong>
                     <span>Sergipe</span>
-
                     <ChangeDarkMode
                         isDarkMode={isDarkMode}
                         handleDarkModeButton={handleDarkModeButton}

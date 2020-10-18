@@ -56,10 +56,18 @@
     display: flex;
     flex-direction: column;
     text-align: right;
+
+    transition: transform 1s;
+}
+
+.content-wrapper .location:hover{
+    transform: scale(1.1);
 }
 
 .content-wrapper .location strong{
     font-weight: 800;
+  
+   
 }
 
 .content-wrapper .enter-app {
@@ -79,7 +87,7 @@
     transition: background-color .2s;
 }
 .content-wrapper .enter-app:hover {
-    background: #F9AE16;
+    background: #96FEFF;
 }
 
 @media (max-width: 700px) {

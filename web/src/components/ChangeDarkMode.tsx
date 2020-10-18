@@ -25,7 +25,7 @@ function ChangeDarkMode({ isDarkMode, handleDarkModeButton, styles }: Props) {
             <FiMoon
                 className={`icon moon ${isDarkMode ? 'active' : ''}`}
                 size={24}
-                color="#045DE9"
+                color="blue"
             />
         </button>
     )
