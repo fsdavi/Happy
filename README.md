@@ -22,7 +22,9 @@
 
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Screenshots](#-screenshots)
+- [Demo](#-demo)
 - [Techs](#-techs)
+- [Layout](#-layout)
 - [Modificações](#-modificações)
 - [Contribuições](#-contribuições)
 - [License](#-license)
@@ -36,12 +38,13 @@ O projeto foi desenvolvido durante a Next Level Week 3 💜🚀
 ## 📸 Screenshots
 <img alt="Happy" src="./.github/happy.png">
 
-## 📸 Demo - Após modificações pessoais
+## 📸 Demo 
+Após modificações pessoais
 <h1 align="center">
     <img alt="Happy" src="./.github/happy.gif">
  </h1>
 
-## 🚀 Techs 🛠
+## 🚀 Techs
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Node.js](https://nodejs.org/en/)
