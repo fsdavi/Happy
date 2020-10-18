@@ -39,7 +39,7 @@ O projeto foi desenvolvido durante a Next Level Week 3 💜🚀
 <img alt="Happy" src="./.github/happy.png">
 
 ## 📸 Demo 
-Após modificações pessoais
+Após modificações pessoais - Web
 <h1 align="center">
     <img alt="Happy" src="./.github/happy.gif">
  </h1>
