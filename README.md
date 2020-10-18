@@ -23,10 +23,9 @@
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Screenshots](#-screenshots)
 - [Techs](#-techs)
-- [Instalação e Start](#-instalação-e-start)
+- [Modificações](#-modificações)
 - [Contribuições](#-contribuições)
 - [License](#-license)
-
 
 ## ❔ Sobre o projeto
 
@@ -36,6 +35,11 @@ O projeto foi desenvolvido durante a Next Level Week 3 💜🚀
 
 ## 📸 Screenshots
 <img alt="Happy" src="./.github/happy.png">
+
+## 📸 Demo - Após modificações pessoais
+<h1 align="center">
+    <img alt="Happy" src="./.github/happy.gif">
+ </h1>
 
 ## 🚀 Techs 🛠
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -52,6 +56,12 @@ Nos links abaixo você encontra o layout do projeto web e também do mobile. Lem
 
 - [Layout Web](https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web)
 - [Layout Mobile](https://www.figma.com/file/X27FfVxAgy9f5IFa7ONlph/Happy-Mobile)
+
+## Modificações
+
+1. Adicionado botão para Dark mode
+
+2. Adicionada funcionalidade para contato via Whatsapp
 
 ## 🤝 Contribuições
 
