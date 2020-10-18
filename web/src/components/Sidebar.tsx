@@ -17,13 +17,16 @@ export default function Sidebar({ isDarkMode, handleDarkModeButton }: Props) {
     return (
         <aside className={`app-sidebar ${isDarkMode ? 'dark' : ''}`}>
             <img src={mapMarkerImg} alt="Happy" />
-            <ChangeDarkMode
-                handleDarkModeButton={handleDarkModeButton}
-                isDarkMode={isDarkMode}
-                styles={{ width: 50 }}
-            />
 
             <footer>
+                <ChangeDarkMode
+                    handleDarkModeButton={handleDarkModeButton}
+                    isDarkMode={isDarkMode}
+                    styles={{
+                        width: 50,
+                        marginBottom: 50
+                    }}
+                />
                 <button type="button" onClick={goBack} className="goBack">
                     <FiArrowLeft size={24} color="#FFF" />
                 </button>
